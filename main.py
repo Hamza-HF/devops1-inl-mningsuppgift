@@ -1,3 +1,5 @@
+# Unit Converter — temperature, distance and weight
+
 from converters.temperature import celsius_to_fahrenheit, fahrenheit_to_celsius, celsius_to_kelvin
 from converters.distance import km_to_miles, miles_to_km, meters_to_feet
 from converters.weight import kg_to_lbs, lbs_to_kg, grams_to_ounces
