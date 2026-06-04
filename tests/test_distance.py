@@ -37,3 +37,20 @@ def test_feet_to_meters_basic():
 def test_feet_negative_raises():
     with pytest.raises(ValueError):
         feet_to_meters(-10)
+
+
+def test_km_to_miles_float():
+    assert round(km_to_miles(1.5), 6) == 0.932057
+
+def test_miles_to_km_large():
+    assert round(miles_to_km(100), 2) == 160.93
+
+def test_meters_to_feet_float():
+    assert round(meters_to_feet(1.75), 4) == 5.7414
+
+def test_km_to_miles_string_raises():
+    with pytest.raises((TypeError, ValueError)):
+        km_to_miles("ten")
+
+def test_feet_to_meters_large():
+    assert round(feet_to_meters(100), 4) == 30.4799
