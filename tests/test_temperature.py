@@ -38,3 +38,19 @@ def test_kelvin_to_celsius_basic():
 def test_kelvin_negative_raises():
     with pytest.raises(ValueError):
         kelvin_to_celsius(-1)
+
+def test_celsius_to_fahrenheit_float():
+    assert round(celsius_to_fahrenheit(36.6), 2) == 97.88
+
+def test_fahrenheit_to_celsius_float():
+    assert round(fahrenheit_to_celsius(98.6), 1) == 37.0
+
+def test_celsius_to_kelvin_large_number():
+    assert celsius_to_kelvin(1000) == 1273.15
+
+def test_celsius_to_fahrenheit_string_raises():
+    with pytest.raises((TypeError, ValueError)):
+        celsius_to_fahrenheit("hot")
+
+def test_kelvin_to_celsius_zero():
+    assert round(kelvin_to_celsius(0), 2) == -273.15
