@@ -63,6 +63,7 @@ Steps:
 1. **Checkout** — downloads the repo onto the GitHub Actions runner
 2. **Set up Python 3.12** — installs the correct Python version
 3. **Install dependencies** — runs `pip install -r requirements.txt`
-4. **Run tests** — runs all tests in `tests/` using `pytest -v`
+4. **Lint with flake8** — checks the code for style and syntax issues
+5. **Run tests** — runs all tests in `tests/` using `pytest -v`
 
 If any test fails the pipeline fails and the commit is marked as broken.
