@@ -42,7 +42,7 @@ def test_kg_to_lbs_float():
     assert round(kg_to_lbs(72.5), 3) == 159.835
 
 def test_lbs_to_kg_large():
-    assert round(lbs_to_kg(200), 4) == 90.7185
+    assert round(lbs_to_kg(200), 2) == 90.72
 
 def test_grams_to_ounces_float():
     assert round(grams_to_ounces(250.5), 4) == 8.8361

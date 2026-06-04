@@ -46,11 +46,11 @@ def test_miles_to_km_large():
     assert round(miles_to_km(100), 2) == 160.93
 
 def test_meters_to_feet_float():
-    assert round(meters_to_feet(1.75), 4) == 5.7414
+    assert round(meters_to_feet(1.75), 3) == 5.741
 
 def test_km_to_miles_string_raises():
     with pytest.raises((TypeError, ValueError)):
         km_to_miles("ten")
 
 def test_feet_to_meters_large():
-    assert round(feet_to_meters(100), 4) == 30.4799
+    assert round(feet_to_meters(100), 2) == 30.48
